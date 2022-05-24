@@ -1,101 +1,56 @@
 <template>
-<div id="root" class="container">
+  <div class="flex justify-center flex-wrap gap-x-5 my-10 gap-y-20">
+      <div class="bg-[#0F075A] py-2 rounded-md">
+          <div class="px-5">
+              <img src="./../assets/ss1.png" alt="" class="block m-auto h-28">
+          </div>
+          <hr class="h-1">
+          <p class="text-md font-medium text-white text-center my-1">Academic policies</p>
+      </div>
+      <div class="bg-[#0F075A] py-2 rounded-md">
+          <div class="px-5">
+              <img src="./../assets/ss1.png" alt="" class="block m-auto h-28">
+          </div>
+          <hr class="h-1">
+          <p class="text-md font-medium text-white text-center my-1">Academic policies</p>
+      </div>
+      <div class="bg-[#0F075A] py-2 rounded-md">
+          <div class="px-5">
+              <img src="./../assets/ss1.png" alt="" class="block m-auto h-28">
+          </div>
+          <hr class="h-1">
+          <p class="text-md font-medium text-white text-center my-1">Academic policies</p>
+      </div>
+      <div class="bg-[#0F075A] py-2 rounded-md">
+          <div class="px-5">
+              <img src="./../assets/ss1.png" alt="" class="block m-auto h-28">
+          </div>
+          <hr class="h-1">
+          <p class="text-md font-medium text-white text-center my-1">Academic policies</p>
+      </div>
+      <div class="bg-[#0F075A] py-2 rounded-md">
+          <div class="px-5">
+              <img src="./../assets/ss1.png" alt="" class="block m-auto h-28">
+          </div>
+          <hr class="h-1">
+          <p class="text-md font-medium text-white text-center my-1">Academic policies</p>
+      </div>
+      <div class="bg-[#0F075A] py-2 rounded-md">
+          <div class="px-5">
+              <img src="./../assets/ss1.png" alt="" class="block m-auto h-28">
+          </div>
+          <hr class="h-1">
+          <p class="text-md font-medium text-white text-center my-1">Academic policies</p>
+      </div>
 
-  <tabs>
-    <tab name="Services" :selected="true">
-      <h1>What we do</h1>
-    </tab>
-    <tab name="Pricing">
-      <h1>How much we do it for</h1>
-    </tab>
-    <tab name="About Us">
-      <h1>Why we do it</h1>
-    </tab>
-  </tabs>
-
-</div>
+  </div>
 </template>
 
 <script>
-// export default {
-//     name: "CardView"
+export default {
+    name: "CardView"
 
-// }
-
-
-Vue.component('tabs', {
-    template: `
-        <div>
-            <div class="tabs">
-              <ul>
-                <li v-for="tab in tabs" :class="{ 'is-active': tab.isActive }">
-                    <a :href="tab.href" @click="selectTab(tab)">{{ tab.name }}</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="tabs-details">
-                <slot></slot>
-            </div>
-        </div>
-    `,
-    
-    data() {
-        return {tabs: [] };
-    },
-    
-    created() {
-        
-        this.tabs = this.$children;
-        
-    },
-    methods: {
-        selectTab(selectedTab) {
-            this.tabs.forEach(tab => {
-                tab.isActive = (tab.name == selectedTab.name);
-            });
-        }
-    }
-});
-
-Vue.component('tab', {
-    
-    template: `
-
-        <div v-show="isActive"><slot></slot></div>
-
-    `,
-    
-    props: {
-        name: { required: true },
-        selected: { default: false}
-    },
-    
-    data() {
-        
-        return {
-            isActive: false
-        };
-        
-    },
-    
-    computed: {
-        
-        href() {
-            return '#' + this.name.toLowerCase().replace(/ /g, '-');
-        }
-    },
-    
-    mounted() {
-        
-        this.isActive = this.selected;
-        
-    }
-});
-
-new Vue({
-    el: '#root'
-});
+}
 </script>
 
 <style>
