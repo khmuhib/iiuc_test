@@ -1,0 +1,22 @@
+{
+  "name": "vue-iiuc",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5050"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.6.2",
+    "@heroicons/vue": "^1.0.6",
+    "swiper": "^8.1.5",
+    "vue": "^3.2.33"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.1",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.0.24",
+    "vite": "^2.9.5"
+  }
+}
